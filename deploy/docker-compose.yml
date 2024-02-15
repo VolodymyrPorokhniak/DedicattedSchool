@@ -1,0 +1,8 @@
+services:
+  sqlc:
+    image: sqlc/sqlc
+    working_dir: /app/internal/delivery/repository/postgres
+    command:
+      - generate
+    volumes:
+      - ./:/app:rw
